@@ -7,7 +7,7 @@ export class Node {
   }
 }
 
-export default class linkedList {
+export default class LinkedList {
   constructor(equalsFn = defaultEqualsFn) {
     this.count = 0;
     this.head = undefined;
