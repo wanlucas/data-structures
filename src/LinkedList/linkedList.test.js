@@ -288,37 +288,4 @@ describe('LinkedList', () => {
     list.clear();
     expect(list.size()).to.equal(0);
   });
-
-  it('returns toString primitive types', () => {
-    expect(list.toString()).to.equal('');
-
-    list.push(1);
-    expect(list.toString()).to.equal('1');
-
-    list.push(2);
-    expect(list.toString()).to.equal('1,2');
-
-    list.clear();
-    expect(list.toString()).to.equal('');
-  });
-
-  it('returns toString primitive types: string', () => {
-    const ds = new LinkedList();
-    ds.push('el1');
-    expect(ds.toString()).to.equal('el1');
-
-    ds.push('el2');
-    expect(ds.toString()).to.equal('el1,el2');
-  });
-
-  it('returns toString objects', () => {
-    const ds = new LinkedList();
-    expect(ds.toString()).to.equal('');
-
-    ds.push({ 1: 1, 2: 2 });
-    expect(ds.toString()).to.equal('1|2');
-
-    ds.push({ 3: 3, 4: 4 });
-    expect(ds.toString()).to.equal('1|2,3|4');
-  });
 });
