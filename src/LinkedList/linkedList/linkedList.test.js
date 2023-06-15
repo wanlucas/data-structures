@@ -1,7 +1,7 @@
 import 'mocha';
 import { expect } from 'chai';
 import LinkedList from './LinkedList.js';
-import defaultEqualsFn from '../../utils/defaultEqualsFn.js';
+import defaultEqualsFn from '../../../utils/defaultEqualsFn.js';
 
 describe('LinkedList', () => {
   let list;

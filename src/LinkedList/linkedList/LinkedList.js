@@ -1,4 +1,4 @@
-import defaultEqualsFn from "../../utils/defaultEqualsFn.js";
+import defaultEqualsFn from "../../../utils/defaultEqualsFn.js";
 
 export class Node {
   constructor(element, next) {
