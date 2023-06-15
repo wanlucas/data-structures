@@ -1,5 +1,5 @@
-import defaultEqualsFn from "../../../utils/defaultEqualsFn.js";
 import LinkedList, { Node } from "../linkedList/LinkedList.js";
+import defaultEqualsFn from "../../../utils/defaultEqualsFn.js";
 
 export class DoublyNode extends Node {
   constructor(element, next, prev) {
@@ -20,6 +20,28 @@ export default class DoublyLinkedList extends LinkedList {
 
   getTail() {
     return this.tail;
+  }
+
+  getElementAt(index) {
+    if (index >= 0 && index < this.count) {
+      let node;
+
+      if (index === 0) node = this.head;
+      else if (index === this.count - 1) node = this.tail;
+      else if (index > Math.floor(this.count / 2)) {
+        let current = this.tail;
+
+        for (let i = this.count - 1; i > index; i--) {
+          current = current.prev;
+        }
+
+        node = current;
+      } else node = super.getElementAt(index);
+      
+      return node;
+    }
+
+    return undefined;
   }
 
   push(element) {
