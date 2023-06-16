@@ -65,7 +65,6 @@ export default class LinkedList {
         const previous = this.getElementAt(index - 1);
         node.next = previous.next;
         previous.next = node;
-        
       }
 
       this.count++;
@@ -78,7 +77,7 @@ export default class LinkedList {
   indexOf(element) {
     let current = this.head;
 
-    for (let i = 0; current; i++) {
+    for (let i = 0; i < this.size(); i++) {
       if (this.equalsFn(current.element, element)) return i;
       current = current.next;
     }
