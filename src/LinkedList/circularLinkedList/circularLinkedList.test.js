@@ -1,6 +1,6 @@
 import 'mocha';
 import { expect } from 'chai';
-import CircularLinkedList from './circularLinkedList.js';
+import CircularLinkedList from './CircularLinkedList.js';
 
 describe('CircularLinkedList', () => {
   let list;
