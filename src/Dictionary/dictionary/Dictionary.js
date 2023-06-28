@@ -18,6 +18,10 @@ export default class Dictionary {
     return Boolean(this.table[key]);
   }
 
+  getTable() {
+    return this.table;
+  }
+
   keyValues() {
     return Object.values(this.table);
   }
@@ -43,7 +47,7 @@ export default class Dictionary {
   }
   
   set(key, value) {
-    if (key && value) {
+    if (key != null && value != null) {
       const valuePair = new ValuePair(key, value);
       this.table[key] = valuePair;
 
